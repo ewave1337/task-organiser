@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ежедневник</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="engine.js"></script>
+</head>
+<body>
+	<div id="container">
+		<form>
+			<input type='button' value='Add New Task' onclick="addTask()">
+		</form>
+		<div class="header" id="header">
+			<span>id</span>
+			<span>Задача</span>
+			<span>Описание</span>
+			<span>Дата создания</span>
+			<span>Выполнено</span>
+		</div>
+		<div id="add">
+			<i id="whattodo">Добавить</i>
+			<div class="add">
+				<span><input type="text" id="id_field" style="width: 44px;" readonly></span>
+				<span><input type="text" id="name_field" style="width: 94px;" placeholder="Name"></span>
+				<span><input type="text" id="description_field" style="width: 194px;" placeholder="Description"></span>
+				<span><input type="text" id="date_field" style="width: 194px;" readonly></span>
+				<span><input type="checkbox" id="complete_field">Complete</span>
+				<span><input type='button' value='Add' onclick="confirm()"><input type='button' value='Cancel' onclick="hide()"></span>
+			</div>
+		</div>
+		<div id="pages"></div>
+	</div>
+</body>
+</html>

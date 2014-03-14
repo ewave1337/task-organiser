@@ -10,12 +10,12 @@ function currentDateString() {
 }
 
 function addElem(id, name, description, date, isComplete) {
-	var el = document.createElement('div');
-	el.className = 'items';
-	el.id = id;
-	el.setAttribute("draggable","");
-	el.innerHTML = "<span>" + id + "</span> <span>" + name + "</span> <span>" + description + "</span> <span>" + date + "</span> <span>" + isComplete + "</span> <span><input type='button' value='Edit' onclick='updateTask(\"" + id + "\")'><input type='button' value='Remove' onclick='removeTask(\"" + id + "\")'></span>";
-	document.getElementById('container').insertBefore(el, document.getElementById('add'));
+	var inner = "<span>" + id + "</span> <span>" + name + "</span> <span>" + description + "</span>" +
+    "<span>" + date + "</span> <span>" + isComplete + "</span>" +
+    "<span><input type='button' value='Edit' onclick='updateTask(\"" + id + "\")'>" +
+    "<input type='button' value='Remove' onclick='removeTask(\"" + id + "\")'></span>";
+
+  $('<div class="items" id="' + id + '" draggable>' + inner + '</div>').insertBefore(document.getElementById('add'))
 }
 
 function addTask() {

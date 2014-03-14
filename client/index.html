@@ -4,13 +4,13 @@
 	<meta charset="utf-8">
 	<title>Ежедневник</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
-  <script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/jquery/dist/jquery.js"></script>
 	<script type="text/javascript" src="engine.js"></script>
 </head>
 <body>
 	<div id="container">
 		<form>
-			<input type='button' value='Add New Task' onclick="addTask()">
+			<input type='button' value='Add New Task' id="newtask">
 		</form>
 		<div class="header" id="header">
 			<span>id</span>
@@ -27,7 +27,7 @@
 				<span><input type="text" id="description_field" style="width: 194px;" placeholder="Description"></span>
 				<span><input type="text" id="date_field" style="width: 194px;" readonly></span>
 				<span><input type="checkbox" id="complete_field">Complete</span>
-				<span><input type='button' value='Add' onclick="confirm()"><input type='button' value='Cancel' onclick="hide()"></span>
+				<span><input type='button' value='Add' id="confirm"><input type='button' value='Cancel' id="hide"></span>
 			</div>
 		</div>
 		<div id="pages"></div>
